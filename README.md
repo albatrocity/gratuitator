@@ -5,7 +5,7 @@ Gratuitator is a yet another tooltip plugin for jQuery that strives to be simple
 
 ## Compatibility
 
-This release relies on a lot of advanced CSS techniques (box-shadow, border-radius, RGBA). That being said, it's compatible with many browsers.
+This release uses Canvas to draw the caret. Browser without canvas support will simply show the tooltip without the caret.
 
 * **Safari 4**
 * **Chrome**
