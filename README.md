@@ -1,6 +1,6 @@
-# Gratuitator
+# Gratuitator (v1.0)
 
-Gratuitator is a yet another tooltip plugin for jQuery that strives to be simple, completely style-able, and imageless. It works by displaying an attribute of your choosing in a tooltip positioned above the element. 
+Gratuitator is a yet another tooltip plugin for jQuery for displaying short text content in a style-able and imageless tooltip. It works by displaying an element's attribute of your choosing in a tooltip on hover. This plugin was inspired by the Facebook tooltips and the need to show additional information for more visual items.
 
 
 ## Compatibility
@@ -17,6 +17,10 @@ This release uses Canvas to draw the caret. Browser without canvas support will 
 Include `jquery.js` and `jquery.gratuitator.js` in your document:
 
     <script src="javascripts/jquery.gratuitator.js" type="text/javascript"></script>
+    
+Include `gratuitator.css` or its styles in your document.
+
+    <link href="gratuitator.css" rel="stylesheet" type="text/css" />
 
 Initiate the plugin on DOMready and tell gratuitator what selector to use
 
@@ -48,9 +52,9 @@ The above will display the source of an image in a tooltip above it.
   </thead>
   <tbody>
     <tr>
-      <td><code>backgroundColor</code></td>
+      <td><code>caretColor</code></td>
       <td><code>'#333, #111'</code></td>
-      <td>Background color for the tooltip. Will accept one or two hex colors: the first is the background of the main tooltip content, the second is the bottom half of a linear gradient applied to the caret. If only one color is given, the caret and tooltip are the same color.</td>
+      <td>Background color for the tooltip caret. Will accept one or two hex colors: if you provide two, a gradient will be used.</td>
     </tr>
     <tr>
       <td><code>caretSize</code></td>
@@ -67,5 +71,20 @@ The above will display the source of an image in a tooltip above it.
       <td><code>16</code></td>
       <td>Distance in pixels of the tooltip from the content.</td>
     </tr>
+    <tr>
+      <td><code>tipXPosition</code></td>
+      <td><code>left</code></td>
+      <td>X Position of tooltip relative to the target. Accepts `left`, `right`, or `center`.</td>
+    </tr>
+    <tr>
+      <td><code>tipYPosition</code></td>
+      <td><code>above</code></td>
+      <td>Y Position of tooltip relative to the target. Accepts `above`, `below`, or `inline`.</td>
+    </tr>
   </tbody>
 </table>
+
+## To Do
+
+* Detect browser edges and reposition accordingly.
+* Maybe some optional effects/timeouts
