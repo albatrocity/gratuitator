@@ -28,7 +28,8 @@
             && $(this).attr(settings.contentAttr) != '' ) {
             var link;
             link = $(this);
-            link.attr('data-gratuitator-title', link.attr('title')).attr('title','');
+            link.attr('data-gratuitator-title', link.attr('title'))
+            link.attr('title','');
             popUp(link);
             return drawTriangle(link);
           }
