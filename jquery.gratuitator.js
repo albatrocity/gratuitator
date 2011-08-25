@@ -5,7 +5,7 @@
     settings = $.extend({
       caretColor: '#333, #111',
       contentAttr: 'title',
-      tipYPosition: 'below',
+      tipYPosition: 'above',
       tipXPosition: 'center',
       tipOffset: 0,
       caretSize: '8'
