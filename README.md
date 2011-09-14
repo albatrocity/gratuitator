@@ -25,7 +25,7 @@ Include `gratuitator.css` or its styles in your document.
 Initiate the plugin on DOMready and tell gratuitator what selector to use
 
     $(function() {
-      $("a.tip").gratuitator();
+      $("a.tip").gratuitate();
     });
 
 Any anchor links with a class of "tip" will display their title attribute in a tooltip on hover.
@@ -36,7 +36,7 @@ Any anchor links with a class of "tip" will display their title attribute in a t
 Gratuitator works on any element with any attribute:
 
     $(function() {
-      $("img").gratuitator({ 'contentAttr': 'src' });
+      $("img").gratuitate({ 'contentAttr': 'src' });
     });
 
 The above will display the source of an image in a tooltip above it.
