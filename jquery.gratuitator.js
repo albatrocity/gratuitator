@@ -188,7 +188,7 @@
             });
           }
         }, function() {
-          $(this).attr('title', $(this).attr('data-gratuitator-title'));          
+          $(this).attr('title', $(this).data('gratuitator-title'));          
           $('.gratuitator-tip').remove();
         });
       });
