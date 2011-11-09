@@ -24,7 +24,7 @@
     var popUp = function(link) {
       var content, height, width, xOffset, xPos, yOffset, yPos;
       if (settings.contentAttr == 'title') {
-        content = link.attr('data-gratuitator-title');
+        content = link.data('gratuitator-title');
       } else {
         content = link.attr(settings.contentAttr);
       }
@@ -173,13 +173,15 @@
     
     
     return this.each(function() {
+      var link, title;
+      link = $(this);
+      title = link.attr('title')
+      link.data('gratuitator-title', title);
       $(this).hover(
         function() {
           if ($(this).attr(settings.contentAttr) !== undefined && 
-            $(this).attr(settings.contentAttr) !== null && $(this).attr(settings.contentAttr) !== '' ) {
-            var link;
-            link = $(this);
-            link.data('gratuitator-title', link.attr('title'));
+            $(this).attr(settings.contentAttr) !== null && 
+            $(this).attr(settings.contentAttr) !== '' ) {
             link.attr('title','');
             popUp(link);
             return drawTriangle(link);
@@ -188,7 +190,7 @@
             });
           }
         }, function() {
-          $(this).attr('title', $(this).data('gratuitator-title'));          
+          $(this).attr('title', title);
           $('.gratuitator-tip').remove();
         });
       });
